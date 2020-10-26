@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formstyle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="return validateForm(this)">
+        <div class="row">
+            <div class="col-25">
+            <label for="fullname">Full Name</label>
+            </div>
+            <div class="col-75"> 
+            <input type="text" id="fullname" name="fullname" placeholder="Full Name...">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+        <label for="addline">Address Line1</label>
+            </div>
+            <div class="col-75">
+        <input type="text" id="add1" name="addline" placeholder="Your Address">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+        <label for="addline2">Address Line2</label>
+            </div>
+            <div class="col-75">
+        <input type="text" id="add2" name="addline2" placeholder="Your Address">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-25">
+        <label for="city">City</label>
+            </div>
+            <div class="col-75">
+        <input type="text" id="cit" name="city" placeholder="City Name...">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+        <label for="lname">State/provision/Region</label>
+            </div>
+            <div class="col-75">
+        <input type="text" id="state" name="state" placeholder="State Name...">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+        <label for="lname">Postal Code/ZIP</label>
+            </div>
+            <div class="col-75">
+        <input type="text" id="pin" name="pin" placeholder="ZIP Code...">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+            <label for="country">Country</label>
+            </div>
+            <div class="col-75">
+            <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+        <label for="lname">Email</label>
+            </div>
+            <div class="col-75">
+        <input type="email" id="email" name="email" placeholder="Email...">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-25">
+        <label for="lname">Phone Number</label>
+            </div>
+            <div class="col-75">
+        <input type="tel" id="phonenum" name="phonenum" placeholder="Your Phone Number....">
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+        <div class="row">
+            <a href="jumbotron.html">Quetion No 2</a>
+        </div>
+        <div class="row">
+            <a href="grid.html">Quetion No 3</a>       
+         </div>
+        </form>
+    </div>
+
+    <script>
+function validateForm(form1)
+{   
+    if(form1.fullname.value==""||form1.addline.value==""||form1.addline2.value==""||form1.city.value==""||form1.state.value==""||form1.pin.value==""||form1.country.value==""||form1.email.value==""||form1.phonenum.value=="")
+    {
+        window.alert("Form Should Not get Submitted")
+        return false;
+    }
+    return true
+}
+    </script>
+</body>
+</html>
